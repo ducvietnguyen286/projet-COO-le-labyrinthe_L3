@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="mainPane" minHeight="0.0" minWidth="0.0" prefHeight="481.0" prefWidth="806.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.li3.coo.projet.MenuController">
+   <children>
+      <ImageView id="bootstrapImg" fitHeight="572.0" fitWidth="822.0" layoutX="-8.0" layoutY="-30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/menu/0.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="109.0" layoutY="193.0" onMouseClicked="#onJoinGame" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/menu/aa3691f29deba7cbcce36cc0d506b98bb55b49d4da39a3ee5e6b4b0d3255bfef95601890afd80709da39a3ee5e6b4b0d3255bfef95601890afd80709f01cdfa05d77ff95d257a4571aaac667.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="115.0" layoutY="348.0" onMouseClicked="#onQuitGame" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/menu/13e33dfab3866806194862fa8c9b1499b7e302efda39a3ee5e6b4b0d3255bfef95601890afd80709da39a3ee5e6b4b0d3255bfef95601890afd80709f01cdfa05d77ff95d257a4571aaac667.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

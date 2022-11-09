@@ -1,0 +1,193 @@
+@startuml
+
+
+
+class Jeu {
+
+- plateau : Cartes_laby[][]
+	- joueurs : ArrayList<Joueur>
+	- cartes : ArrayList<Cartes_laby>
+	- tresors : ArrayList<Tresor>
+	- laCarte : Cartes_laby
+	- leJoueur : Joueur
+
+	+ getCartes() 
+	+ Jeu()
+	- genererPlateau() : void
+	- genererJoueur() : void
+	- genererCartes() : void
+	- genererTresors() : void
+	- distribuerTresorsJoueurs() : void
+	- distribuerTresorsCartes() : void
+	+ placerCarte(int, int) : boolean
+	- decalerColonne(int, int, int) : void
+	- decalerLigne(int, int, int) : void
+	- decalerJoueurColonne(Joueur, int, int) : void
+	- decalerJoueurLigne(Joueur, int, int) : void
+	+ deplacerJoueur(String) : boolean
+	+ toString() : String
+	+ getJoueurs() : ArrayList<Joueur> 
+	+ getPlateau() : Cartes_laby[][]
+	+ getLaCarte() : Cartes_laby
+	+ getCasesVoisines(int, int) : boolean[]
+	+ getLeJoueur() : Joueur
+	+ setLeJoueur(Joueur) : void
+	+ joueurSuivant() : void
+
+}	
+
+class Cartes_tresor {
+	- nom String
+
+	+String getNom()
+}
+
+class Tresor {
+	- nom : String
+	- vivant : boolean
+
+	+ Tresor(String, boolean)
+	+ getNom() : String
+	+ isVivant() : boolean
+	+ seDeplacer() : Void
+	+ toString() : String
+}
+
+ class Cartes_laby{
+	- pos_x : Integer
+	- pos_y : Integer
+	- forme : Forme
+	- sens : Sens
+	- fixe : boolean
+	- tresor : Tresor
+	- ouvert : boolean[]
+
+	+ Cartes_laby(int, int, Forme, Sens, boolean, Tresor)
+	+ Cartes_laby(Forme)
+	+ getPos_x() : int 
+	+ setPos_x(int) : Void
+	+ getPos_y() : int 
+	+ setPos_y(int) : Void
+	+ getForme() : Form 
+	+ getSens() : Sens
+	+ setSens(Sens) : Void
+	+ tourneSensDroite() : Void
+	+ isFixe() : boolean
+	+ getTresor() : Tresor
+	+ setTresor(Tresor) : Void
+	+ deplacer(int, int): Void
+	+ setOuvert() : Void
+	+ getOuvert() : boolean[]
+	+ randomSens() : Void
+	+ toString() : String
+}
+
+class Joueur {
+	- id : int
+	- pos_x : int
+	- pos_y : int
+	- pos_init_x : int
+	- pos_init_y : int
+	- cartes : Stack<Cartes_tresor> 
+
+	+ Joueur(int, int, int)
+	+ getId() : int
+	+ getPos_x() : int
+	+ setPos_x(int) : void
+	+ getPos_y() : int
+	+ setPos_y(int) : void
+	+ getNb_cartes() : int
+	+ getCartes(): Stack<Cartes_tresor> 
+	+ getCarteATrouver() : String
+	+ tresor_trouve(String) : boolean
+	+ estSurCaseDepart() : boolean
+	+ enleveSommet() : void
+	+ getPos_init_x() : int
+	+ getPos_init_y() : int
+	+ ajout_carte(String) : void
+	+ deplacer(int, int) : boolean
+	+ case_depart() : boolean
+	+ toString() : String
+
+}
+
+
+
+class IA extends Joueur{
+	- niveau : int
+	- dejaVu : boolean[][]
+	- plateau_jeu : Cartes_laby[][]
+
+	+ IA(int, int, int, int, Cartes_laby[][])
+	+ getPlateau_jeu() : Cartes_laby[][]
+	+ setPlateau_jeu(Cartes_laby[][]) : void 
+	+ getNiveau() : int
+	+ estCoordValide(int, int) : boolean 
+	+ initDejaVu() : void
+	+ estDejaVu(int, int) : boolean
+	+ getCasesVoisines(int, int): boolean[] 
+	+ estDansCaseDepart() : boolean
+	+ caseDepart(int, int) : void
+	+ prochaineDirection() : void
+	+ prochaineDirection(int, int) : void
+	+ jouer() : void 
+}
+
+
+
+Joueur "2..4" -- "1..*" Jeu
+Cartes_laby "49" -- "1" Jeu
+Joueur "1" -- "0..12" Cartes_tresor
+Cartes_laby "1" -- "0..1" Tresor
+
+
+
+
+enum Sens {
+	HAUT
+	GAUCHE
+	DROITE
+	BAS
+}
+
+enum Forme {
+	DROIT
+	EN_T
+	ANGLE_D
+}
+
+enum ListeTresor{
+	ANNEAU
+	ARAIGNEE
+	ARMURE
+	CARTE_TRESOR
+	CHANDELIER
+	CHAUVE_SOURIS
+	CHOUETTE
+	CLEFS
+	COFFRE_TRESOR
+	COURONNE
+	CRANE
+	DINOSAURE
+	EMERAUDE
+	EPEE
+	FANTOME
+	FEE
+	GENIE
+	GRIMOIRE
+	RAT
+	SAC_PIECES
+	SALAMANDRE
+	SCARABEE
+	SPHYNX_TETE
+	TROLL
+
+	- nom : String
+	- vivant: boolean
+
+	  ListeTresor()
+	+ String getNom()
+	+ Boolean isVivant()
+}
+
+@enduml

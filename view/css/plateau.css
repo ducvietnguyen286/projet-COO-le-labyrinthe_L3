@@ -1,0 +1,196 @@
+.droit {
+	-fx-background-image : url("../images/labyrinthe-droit.png");
+	-fx-background-size : 100% 100%;
+}
+.angle {
+	-fx-background-image : url("../images/labyrinthe-angle.png");
+	-fx-background-size : 100% 100%;
+}
+.en_t {
+	-fx-background-image : url("../images/labyrinthe-croisement.png");
+	-fx-background-size : 100% 100%;
+}
+.fleche {
+	-fx-background-size : 100% 100%;
+	-fx-background-image : url("../images/fleche.png");
+}
+.fleche_dep{
+	-fx-background-size : 100% 100%;
+	-fx-background-color : #594769;
+	-fx-background-image : url("../images/fleche_dep.png");
+}
+.fleche_rota{
+	-fx-background-size : 100% 100%;
+	-fx-background-color : gray;
+	-fx-background-image : url("../images/fleche_rota.png");
+}
+.fhaut {
+	-fx-rotate : 0;
+}
+.fbas {
+	-fx-rotate : 180;
+}
+.fgauche {
+	-fx-rotate : 90;
+}
+.fdroite {
+	-fx-rotate : 270;
+}
+.plateau {
+	-fx-border-style : solid;
+	-fx-border-width : 2;
+	-fx-border-color : black;
+	-fx-background-color : blue;
+}
+.joueur1 {
+	-fx-background-size : 100% 100%;
+	-fx-background-image : url("../images/pion1.png");
+}
+.joueur2 {
+	-fx-background-size : 100% 100%;
+	-fx-background-image : url("../images/pion2.png");
+}
+.joueur3 {
+	-fx-background-size : 100% 100%;
+	-fx-background-image : url("../images/pion3.png");
+}
+.joueur4 {
+	-fx-background-size : 100% 100%;
+	-fx-background-image : url("../images/pion4.png");
+}
+.fond_joueur{
+	-fx-background-color : #7e6111;
+}
+.fond_plateau{
+	-fx-background-color : #f88804;
+}
+.carte_placer{
+	-fx-border-style : solid;
+	-fx-border-width : 2;
+	-fx-border-color : black;
+}
+.depart {
+	-fx-background-size : 100% 100%;
+	-fx-background-image : url("../images/tresors/depart.png");
+}
+.salamandre {
+	-fx-background-size : 100% 100%;
+	-fx-background-image : url("../images/tresors/salamandre.png");
+}
+
+.anneau{
+	-fx-background-size : 100% 100%;
+	-fx-background-image : url("../images/tresors/anneau.png");
+}
+
+.araignee{
+	-fx-background-size : 100% 100%;
+	-fx-background-image : url("../images/tresors/araignee.png");
+}
+
+.armure{
+	-fx-background-size : 100% 100%;
+	-fx-background-image : url("../images/tresors/armure.png");
+}
+
+.chandelier{
+	-fx-background-size : 100% 100%;
+	-fx-background-image : url("../images/tresors/chandelier.png");
+}
+.carte{
+	-fx-background-size : 100% 100%;
+	-fx-background-image : url("../images/tresors/carte.png");
+}
+.chauve{
+	-fx-background-size : 100% 100%;
+	-fx-background-image : url("../images/tresors/chauve.png");
+}
+
+.chouette{
+	-fx-background-size : 100% 100%;
+	-fx-background-image : url("../images/tresors/chouette.png");
+}
+
+.clefs{
+	-fx-background-size : 100% 100%;
+	-fx-background-image : url("../images/tresors/clefs.png");
+}
+
+.coffre{
+	-fx-background-size : 100% 100%;
+	-fx-background-image : url("../images/tresors/coffre.png");
+}
+
+.couronne{
+	-fx-background-size : 100% 100%;
+	-fx-background-image : url("../images/tresors/couronne.png");
+}
+
+.crane{
+	-fx-background-size : 100% 100%;
+	-fx-background-image : url("../images/tresors/crane.png");
+}
+
+.dinosaure{
+	-fx-background-size : 100% 100%;
+	-fx-background-image : url("../images/tresors/dinosaure.png");
+}
+
+.emeraude{
+	-fx-background-size : 100% 100%;
+	-fx-background-image : url("../images/tresors/emeraude.png");
+}
+
+.epee{
+	-fx-background-size : 100% 100%;
+	-fx-background-image : url("../images/tresors/epee.png");
+}
+
+.fantome{
+	-fx-background-size : 100% 100%;
+	-fx-background-image : url("../images/tresors/fantome.png");
+}
+
+.fee{
+	-fx-background-size : 100% 100%;
+	-fx-background-image : url("../images/tresors/fee.png");
+}
+
+.genie{
+	-fx-background-size : 100% 100%;
+	-fx-background-image : url("../images/tresors/genie.png");
+}
+
+.grimoire{
+	-fx-background-size : 100% 100%;
+	-fx-background-image : url("../images/tresors/grimoire.png");
+}
+
+.rat{
+	-fx-background-size : 100% 100%;
+	-fx-background-image : url("../images/tresors/rat.png");
+}
+
+.sac{
+	-fx-background-size : 100% 100%;
+	-fx-background-image : url("../images/tresors/sac.png");
+}
+
+
+.scarabee{
+	-fx-background-size : 100% 100%;
+	-fx-background-image : url("../images/tresors/scarabee.png");
+}
+
+
+.sphynx{
+	-fx-background-size : 100% 100%;
+	-fx-background-image : url("../images/tresors/sphynx.png");
+}
+
+.troll{
+	-fx-background-size : 100% 100%;
+	-fx-background-image : url("../images/tresors/troll.png");
+}
+
+
